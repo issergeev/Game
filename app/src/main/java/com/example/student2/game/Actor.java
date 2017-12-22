@@ -28,9 +28,10 @@ public class Actor implements Drawable, Moveable {
         vx = 10;
     }
 
-    Actor(){
+    Actor(Bitmap pic){
         this.x = 0;
         this.y = 0;
+        this.pic = pic;
     }
 
     @Override
@@ -53,9 +54,8 @@ public class Actor implements Drawable, Moveable {
             right = true;
         }
 
-        pic = BitmapFactory.decodeResource(Resources.getSystem(), R.drawable.trump_run);
         Rect rect = new Rect((int) x - 50, (int) y - 50, (int) x + 50, (int) y + 50);
-        Rect rect1 = new Rect(100 , 0, 100, 100);
+        Rect rect1 = new Rect(100 , 0, 200, 100);
         canvas.drawBitmap(pic, rect1, rect, paint);
         //canvas.drawCircle(x, y, 25, paint);
     }
