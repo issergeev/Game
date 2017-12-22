@@ -9,6 +9,7 @@ import android.view.View;
 
 public class simpleDraw extends View {
 
+    long cut;
     Actor actor;
     Bitmap pic;
 
